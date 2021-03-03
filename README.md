@@ -19,9 +19,13 @@ forecast = m.predict(future)
 
 ### 판다스 datetimeindex와 resample
 데이터를 다루다 보면 날짜형식을 인덱스로 활용해야 할 경우가 많다. 그러한 경우 다음과 같은 방법을 통해 날짜형식을 iso시간 형태로 바꿔준 후 인덱스로 넘겨주면된다.
+
 chicago_df['Date'] = pd.to_datetime(chicago_df['Date'], format = '%m/%d/%Y %I:%M:%S %p')
+
 chicago_df.index = pd.DatetimeIndex(chicago_df['Date'])
+
 또한 resample함수를 통해, 날짜를 얼마 간격으로 표시할지 설정 가능하다. 다음과 같이 사용한다.
+
 year_df = chicago_df.resample('Y').size()
 ![image](https://user-images.githubusercontent.com/78472987/109779117-f7188180-7c48-11eb-9ba7-fbcbb82601ba.png)
 
