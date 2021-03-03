@@ -27,5 +27,5 @@ chicago_df.index = pd.DatetimeIndex(chicago_df['Date'])
 또한 resample함수를 통해, 날짜를 얼마 간격으로 표시할지 설정 가능하다. 다음과 같이 사용한다.
 
 year_df = chicago_df.resample('Y').size()
-![image](https://user-images.githubusercontent.com/78472987/109779117-f7188180-7c48-11eb-9ba7-fbcbb82601ba.png)
+![image](https://user-images.githubusercontent.com/78472987/109779334-321ab500-7c49-11eb-90a3-5c4c733da0be.png)
 
