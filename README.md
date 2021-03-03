@@ -30,3 +30,5 @@ year_df = chicago_df.resample('Y').size()
 
 ![image](https://user-images.githubusercontent.com/78472987/109779334-321ab500-7c49-11eb-90a3-5c4c733da0be.png)
 
+![image](https://user-images.githubusercontent.com/78472987/109780302-3c897e80-7c4a-11eb-88e5-8e95e5ab9104.png)
+
