@@ -6,12 +6,13 @@ ImageDataGenerator(rescale=1/255.0, rotation_range=40, width_shift_range=0.2, he
 ### 타임시리즈 데이터 분석용 Prophet 라이브러리 사용법
 Prophet이란 페이스북에서 만든 오픈소스 라이브러리이며, from fbprophet import Prophet라이브러리 임포트를 하여 사용가능하다.
 Prophet라이브러리를 사용하기 위해서는 문자형식으로 된 날짜를 pd.to_datetime을 통해 iso날짜 형식으로 바꿔줘야 한다. 또한, Columns은 날짜컬럼은 ds로, 예측하려는 수치의 컬럼은 y로 필수로 바꿔주어야 한다.
-chicago_prophet.rename(columns={'Date':'ds',0:'y'})
 chicago_prophet.rename(columns={'Date':'ds',0:'y'}, inplace=True)
 다음과 같이 사용한다.
 m = Prophet()
+
 m.fit(chicago_prophet)
 
 future = m.make_future_dataframe(periods=30)
+
 forecast = m.predict(future)
 
